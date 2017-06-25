@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset='UTF-8'>
+		<title>HTML 质数计算器</title>
+		<script>
+		function myfunction()
+		{
+			document.getElementById('show').innerHTML=''
+			console.log(Date());
+			userinput=Math.ceil(textinput.value);
+			var time=0
+			for (var i=userinput-1;i>2;i--)
+			{
+		    	var iszhishu=1;
+		    		for (var now=2;now<Math.sqrt(i);now++)
+		    		{
+		    			if (i%now==0)
+		    			{
+		    				iszhishu=0;
+		    				break;
+		    			}
+		    		}
+		    	if (iszhishu==1)
+		    	{
+		    		time++
+		    		document.getElementById('show').append(i)
+		    		document.getElementById('show').append(',')
+		    		document.getElementById('primecount').innerHTML='there are '+time+' primes:'
+		    		if (time%10==0)
+		    		{	
+		    			document.getElementById('show').append('\n')
+		    				
+		    		}
+		    	}
+			}
+			console.log(Date())
+		}
+		</script>
+	</head>
+	<body>
+		<div id="main">
+			Input a number:<br>
+			<input id="textinput" type="number" name="number" value="">
+			<button onclick=myfunction()>click to submit</button>
+			<p id='primecount'></p> 
+			<p id='show'></p>
+		</div>
+	</body>
+</html>

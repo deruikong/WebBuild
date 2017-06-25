@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset='UTF-8'>
+		<title>HTML 质数计算器</title>
+		<script>
+		function myfunction()
+		    {
+			i=ff.value;
+			var iszhishu=1;
+			for (var now=2;now<Math.sqrt(i);now++)
+			{
+				if (i%now===0)
+				   {iszhishu=0
+				   	break}
+				
+			}
+			if (iszhishu===1)
+			{alert(i+' is a zhishu')}
+			else
+			{alert(i+' isn\'t a zhishu')}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="main">
+			<form>
+				Input a number:<br>
+				<input id="ff" type="text" name="firstname" value="">
+				<button onclick=myfunction()>click to submit</button>
+				<br><br>
+			</form> 
+		</div>
+	</body>
+</html>
